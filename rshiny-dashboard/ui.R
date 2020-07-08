@@ -17,7 +17,9 @@ navbarPage(
              sidebarLayout(
                  sidebarPanel(uiOutput(outputId = "xselect"),
                               uiOutput(outputId = "yselect"),
-                              uiOutput(outputId = "timeselect")),
+                              uiOutput(outputId = "timeselect"),
+                              uiOutput(outputId = "Border_Arg1"),
+                              uiOutput(outputId = "Border_Arg2")),
                  mainPanel(plotlyOutput("plot"),
                            plotlyOutput("plot1"))
              )),

@@ -18,21 +18,30 @@ gapminder <- read.csv('data/gapminder.csv', header = T)
 function(input, output, session) {
     output$xselect <- renderUI({
         selectInput(inputId = "xcol",
-                    label = "Select first country",
+                    label = "Select first country:",
                     choices = gapminder$country)
     })
     
     output$yselect <- renderUI({
         selectInput(inputId = "ycol",
-                    label = "Select second country",
+                    label = "Select second country:",
                     choices = gapminder$country)
     })
     
     output$timeselect <- renderUI({
         selectInput(inputId = "time",
-                    label = "Select year",
+                    label = "Select year:",
                     choices = gapminder$year)
     })
+    
+    output$Border_Arg1 <- renderUI({
+        tags$head(tags$style(HTML( "#xcol ~ .selectize-control.single .selectize-input {border: 1px solid magenta;}")))
+    })
+    
+    output$Border_Arg2 <- renderUI({
+        tags$head(tags$style(HTML( "#ycol ~ .selectize-control.single .selectize-input {border: 1px solid blue;}")))
+    })
+    
     
     # select only countries left of first selection
     outVar = reactive({
