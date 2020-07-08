@@ -3,3 +3,4 @@
 Basic Shiny dashboard using a navbar and ggplot2 to visualize data from gapminder.org. 🚀 📊
 
 
+![Dashboard](dashboard.png?raw=true "Gapminder Dashboard")
