@@ -9,6 +9,8 @@
 
 library(shiny)
 library(markdown)
+library(ggplot2)
+library(plotly)
 
 # Define UI logic
 navbarPage(

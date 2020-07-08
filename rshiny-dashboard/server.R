@@ -8,8 +8,6 @@
 #
 
 library(shiny)
-library(ggplot2)
-library(plotly)
 
 # load data
 gapminder <- read.csv('data/gapminder.csv', header = T)
